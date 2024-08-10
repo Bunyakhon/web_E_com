@@ -1,0 +1,219 @@
+/* สไตล์ทั่วไป */
+body {
+    background-color: #eff8ff;
+    color: #E2E2B6;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400; /* ใช้น้ำหนักฟอนต์ที่ต้องการ เช่น 400 หรือ 700 */
+    font-style: normal;
+}
+
+
+
+/* Header */
+header {
+    position: fixed; /* คงที่อยู่กับที่เมื่อเลื่อนหน้า */
+    top: 0;
+    left: 0;
+    width: 100%; /* ให้ครอบคลุมความกว้างเต็มจอ */
+    background-color: #03346E;
+    height: 100px; /* ความสูงของ header */
+    z-index: 1000; /* ให้อยู่เหนือเนื้อหาอื่น ๆ */
+    box-sizing: border-box; /* รวม padding และ border ในขนาด */
+    padding: 0 20px; /* เพิ่มระยะห่างด้านซ้ายและขวา */
+}
+
+/* Box-header */
+.box-header {
+    display: flex; /* ใช้ Flexbox เพื่อจัดตำแหน่งแนวตั้ง */
+    align-items: center; /* จัดตำแหน่งให้กลางแนวตั้ง */
+    justify-content: space-between; /* กระจายพื้นที่ระหว่าง h1, menu, และ search-container */
+    max-width: 1200px; /* กำหนดความกว้างสูงสุด */
+    margin: 0 auto; /* จัดกลางให้ header อยู่ตรงกลาง */
+    padding: 19px 20px; /* เพิ่มระยะห่างด้านซ้ายและขวา */
+}
+
+/* Header title */
+.text-header {
+    margin: 0;
+}
+
+.link-header {
+    color: #E2E2B6;
+    text-decoration: none;
+    font-size: 1.5rem; /* ขนาดฟอนต์ของหัวเรื่อง */
+}
+
+/* Navbar */
+.navbar {
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงเนื้อหาในแนวนอน */
+    align-items: center; /* จัดตำแหน่งแนวตั้งกลาง */
+}
+
+/* Menu */
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* ทำให้รายการเมนูอยู่ในบรรทัดเดียวกัน */
+}
+
+.menu > li {
+    margin: 0 10px; /* ระยะห่างระหว่างรายการเมนู */
+}
+
+.menu > li > a {
+    color: #E2E2B6;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+.menu > li > a:hover {
+    background-color: #021526;
+    color: #FFF;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #03346E;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content li a {
+    color: #E2E2B6;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #021526;
+    color: #FFF;
+}
+
+/* แสดง dropdown เมื่อ hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Search Container */
+.search-container {
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงช่องค้นหาและปุ่มค้นหาในแนวนอน */
+    align-items: center; /* จัดตำแหน่งแนวตั้งให้กลาง */
+}
+
+/* Search Input */
+.search-input {
+    padding: 5px 10px; /* เพิ่มระยะห่างภายในช่องค้นหา */
+    border: none;
+    border-radius: 4px; /* ขอบมน */
+    font-size: 1rem; /* ขนาดฟอนต์ */
+    width: 200px; /* กำหนดความกว้างของช่องค้นหา */
+}
+
+/* Search Button */
+.search-button {
+    padding: 5px 10px; /* เพิ่มระยะห่างภายในปุ่มค้นหา */
+    margin-left: 10px; /* ระยะห่างระหว่างช่องค้นหาและปุ่มค้นหา */
+    margin-right: 16px;
+    border: none;
+    border-radius: 4px; /* ขอบมน */
+    background-color: #E2E2B6; /* สีพื้นหลังของปุ่มค้นหา */
+    color: #03346E; /* สีของข้อความปุ่มค้นหา */
+    font-size: 1rem; /* ขนาดฟอนต์ */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อ hover บนปุ่มค้นหา */
+}
+
+.search-button:hover {
+    background-color: #C2C2A0; /* เปลี่ยนสีพื้นหลังของปุ่มเมื่อ hover */
+}
+
+/* Search Icon */
+.search-icon {
+    height: 50px;
+    width: 50px;
+    margin-left: 20px; /* ระยะห่างระหว่างไอคอนและเนื้อหาอื่น */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* เมื่อหน้าจอเล็กกว่า 768px */
+    header {
+        text-align: center;
+        position: fixed; /* คงที่อยู่กับที่เมื่อเลื่อนหน้า */
+        top: 0;
+        left: 0;
+        width: 100%; /* ให้ครอบคลุมความกว้างเต็มจอ */
+        background-color: #03346E;
+        height: 421px; /* ความสูงของ header */
+        z-index: 1000; /* ให้อยู่เหนือเนื้อหาอื่น ๆ */
+        box-sizing: border-box; /* รวม padding และ border ในขนาด */
+        padding: 10px 99px; /* เพิ่มระยะห่างด้านซ้ายและขวา */
+    }
+    
+    .box-header {
+        flex-direction: column; /* จัดเรียงในแนวตั้ง */
+        align-items: flex-start; /* จัดตำแหน่งที่เริ่มต้น */
+        padding: 10px; /* ลดระยะห่างด้านใน */
+        height: auto;
+    }
+
+    .navbar {
+        flex-direction: column; /* จัดเรียงในแนวตั้ง */
+        align-items: flex-start; /* จัดตำแหน่งที่เริ่มต้น */
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column; /* จัดเรียงเมนูในแนวตั้ง */
+        width: 100%; /* ให้ครอบคลุมความกว้างเต็มจอ */
+        margin-top: 10px; /* เพิ่มระยะห่างด้านบนของเมนู */
+    }
+
+    .menu > li {
+        margin: 5px 0; /* ระยะห่างระหว่างรายการเมนูในแนวตั้ง */
+    }
+
+    .search-container {
+        width: 100%; /* ให้ครอบคลุมความกว้างเต็มจอ */
+        margin-top: 10px; /* เพิ่มระยะห่างด้านบนของช่องค้นหา */
+    }
+
+    .search-input {
+        width: calc(100% - 100px); /* ทำให้ช่องค้นหากว้างขึ้น */
+    }
+
+    .search-button {
+        width: 90px; /* ปรับขนาดปุ่มค้นหาให้เหมาะสม */
+    }
+
+    .search-icon {
+        text-align: center;
+        width: 40px; /* ปรับขนาดไอคอนให้เล็กลง */
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* เมื่อหน้าจอเล็กกว่า 480px */
+    .text-header {
+        font-size: 1.2rem; /* ลดขนาดฟอนต์ของหัวเรื่อง */
+    }
+
+    .search-input {
+        font-size: 0.9rem; /* ลดขนาดฟอนต์ของช่องค้นหา */
+    }
+
+    .search-button {
+        font-size: 0.9rem; /* ลดขนาดฟอนต์ของปุ่มค้นหา */
+    }
+}
